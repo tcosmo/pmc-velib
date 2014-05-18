@@ -12,30 +12,27 @@ int main()
     Reseau r(3);
 
     Couche C1;
-    for(int i = 0 ; i < 4 ; i++)
+    for(int i = 0 ; i < 2 ; i++)
         C1.neurones.push_back(Neurone(sigmoide,sigmoder));
 
-    Couche C2;
+    /*Couche C2; 
     for(int i = 0 ; i < 3 ; i++)
         C2.neurones.push_back(Neurone(sigmoide,sigmoder));
-    
+    */
     Couche C3;
     for(int i = 0 ; i < 2 ; i++)
         C3.neurones.push_back(Neurone(sigmoide,sigmoder));
 
     r.couches.push_back(C1);
-    r.couches.push_back(C2);
+    //r.couches.push_back(C2);
     r.couches.push_back(C3);
     
     
     PMC pmc(r, 10, base);
     
-    for(int i = 0 ; i < 10 ; i++)
-        pmc.cycle_apprentissage(); 
-    cout << pmc.reseau.couches[pmc.reseau.couches.size()-1].sortie;
-
-    //for(int i = -1 ; i < 100 ; i++)
-      //  pmc.cycle_apprentissage();
+    for(int i = 0 ; i < 10000 ; i++)
+        pmc.cycle_apprentissage();
+    cout << pmc.reseau.sorties.back() << endl;   
 
     return 0;
 }

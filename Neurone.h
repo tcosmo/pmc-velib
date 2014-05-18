@@ -19,9 +19,9 @@ class Neurone
             activation = poids.t()*entree - biais;
         }
         
-        double calcule_sortie()
+        void calcule_sortie()
         {
-            return transfert(activation(0,0));
+            sortie = transfert(activation(0,0));
         }
 
         void maj_neurone(mat entree)
@@ -46,7 +46,6 @@ class Couche
         mat calcule_mat_poids()
         {
             poids = neurones[0].poids;
-
             for(int i = 1 ; i < neurones.size() ; i++)
             {
                 poids.insert_cols(i,neurones[i].poids);
@@ -55,18 +54,16 @@ class Couche
             return poids;
         }
 
-        void calcule_sortie()
-        {
-            sortie.clear();
-            for(int i=0 ; i < neurones.size() ; i++)
-                sortie.insert_rows(i,rowvec({neurones[i].sortie(0,0)}));
-        }
 
         void maj_couche(mat entree)
         {
+            vector<double> p_sortie;
             for(int i=0 ; i < neurones.size() ; i++)
+            {
                 neurones[i].maj_neurone(entree);
-                //calcule_sortie();
+                p_sortie.push_back(neurones[i].sortie(0,0));
+            }
+            sortie = colvec(p_sortie);
         }
 
         vector<Neurone> neurones;
@@ -104,6 +101,7 @@ class Reseau
                         float diff = b - a;
                         float r = random * diff;
                         return a + r;}); 
+                    
                     n.biais = zeros<mat>(1,1);
                     n.biais.imbue([]() { 
                         float a = -0.5, b = 0.5;
@@ -111,6 +109,7 @@ class Reseau
                         float diff = b - a;
                         float r = random * diff;
                         return a + r;}); 
+                    
                 }
             }
 

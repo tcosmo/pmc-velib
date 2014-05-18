@@ -64,7 +64,6 @@ class PMC
             for(auto couple: base_appretissage)
             {
                 reseau.calcule_sortie(get<0>(couple));
-                
                 calcule_sensibilite(couple);
                 
                 for(int k = 0 ; k < reseau.couches.size() ; k++)
@@ -75,7 +74,6 @@ class PMC
                         reseau.couches[k].neurones[i].poids += ajout.t();
                         reseau.couches[k].neurones[i].biais += etha*sensibilite[k-1][i];
                     }
-            
             }
         }
 
