@@ -4,10 +4,10 @@
 
 int main()
 {
-    mat A = colvec({-0.4,0.6,-0.87});
-    mat B = colvec({0.09,0.56});
 
-    vector<tuple<mat,mat>> base = {make_tuple(A,B)};
+    vector<tuple<mat,mat>> base = {make_tuple(colvec({-0.4,0.6,-0.87}),colvec({0.09,0.56}))
+    , make_tuple(colvec({0.12,-0.34,0.678}),colvec({0.345,0.876}))
+    };
     
     Reseau r(3);
 
@@ -24,7 +24,6 @@ int main()
         C3.neurones.push_back(Neurone(sigmoide,sigmoder));
 
     r.couches.push_back(C1);
-    //r.couches.push_back(C2);
     r.couches.push_back(C3);
     
     
@@ -32,7 +31,11 @@ int main()
     
     for(int i = 0 ; i < 10000 ; i++)
         pmc.cycle_apprentissage();
-    cout << pmc.reseau.sorties.back() << endl;   
+    mat C = get<0>(base[1]);
+    cout << C;
+    pmc.reseau.calcule_sortie(C);
+    cout << pmc.reseau.sorties.back();
+   
 
     return 0;
 }

@@ -81,5 +81,5 @@ class PMC
         double etha;
         vector<tuple<mat,mat>> base_appretissage;
         vector<mat> sensibilite;
-
+        
 };
