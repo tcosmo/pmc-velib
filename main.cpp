@@ -1,11 +1,25 @@
 #include <iostream>
 
 #include "PMC.h"
+#include <sqlite3.h>
 
 int main()
 {
 
-    vector<tuple<mat,mat>> base = {make_tuple(colvec({-0.4,0.6,-0.87}),colvec({0.09,0.56}))
+    sqlite3 *db;
+    int rc;
+
+    rc = sqlite3_open("data_velib.sqlite",&db);
+    if(rc)
+    {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+        exit(0);
+    }else{
+        fprintf(stderr, "Opened database successfully\n");
+    }
+    
+
+/*    vector<tuple<mat,mat>> base = {make_tuple(colvec({-0.4,0.6,-0.87}),colvec({0.09,0.56}))
     , make_tuple(colvec({0.12,-0.34,0.678}),colvec({0.345,0.876}))
     };
     
@@ -15,10 +29,10 @@ int main()
     for(int i = 0 ; i < 2 ; i++)
         C1.neurones.push_back(Neurone(sigmoide,sigmoder));
 
-    /*Couche C2; 
+    Couche C2; 
     for(int i = 0 ; i < 3 ; i++)
         C2.neurones.push_back(Neurone(sigmoide,sigmoder));
-    */
+    
     Couche C3;
     for(int i = 0 ; i < 2 ; i++)
         C3.neurones.push_back(Neurone(sigmoide,sigmoder));
@@ -35,7 +49,7 @@ int main()
     cout << C;
     pmc.reseau.calcule_sortie(C);
     cout << pmc.reseau.sorties.back();
-   
+*/ 
 
     return 0;
 }
