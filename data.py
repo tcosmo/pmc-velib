@@ -106,7 +106,7 @@ while iReq <= NB_REQ:
             req = urllib.request.urlopen("https://api.jcdecaux.com/vls/v1/stations/"+str(st)+"?contract=Paris&apiKey="+KEY_VELIB)
             str_result = req.read().decode()
             dct_velib_json = json.loads(str_result)
-            sql_velib = 'INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update") VALUES ('+str(st)+','+str(id_meteo)+","+str(dct_velib_json['available_bike_stands'])+","+str(dct_velib_json['available_bikes'])+","+str(dct_velib_json['last_update']/1e3)+")"
+            sql_velib = 'INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES ('+str(st)+','+str(id_meteo)+","+str(dct_velib_json['available_bike_stands'])+","+str(dct_velib_json['available_bikes'])+","+str(dct_velib_json['last_update']/1e3)+","+str(curr_time)+")"
             print(sql_velib)
             c.execute(sql_velib)
             conn.commit()
