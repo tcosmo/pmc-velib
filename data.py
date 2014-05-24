@@ -97,7 +97,7 @@ while iReq <= NB_REQ:
     
     curr_time = time.time()
     if curr_time-last_time > FREQ_VELIB*60:
-        print("{} REQUETE {}/{} DEBUT".format(datetime.date.today().strftime("%Y-%m-%d %H:%M:%S"), iReq, NB_REQ))
+        print("{} REQUETE {}/{} DEBUT".format(datetime.datetime.fromtimestamp(curr_time).strftime("%Y-%m-%d %H:%M:%S"), iReq, NB_REQ))
         last_time = time.time()
         id_meteo = 0
         for t in c.execute("SELECT * FROM Meteo"):
@@ -106,11 +106,12 @@ while iReq <= NB_REQ:
             req = urllib.request.urlopen("https://api.jcdecaux.com/vls/v1/stations/"+str(st)+"?contract=Paris&apiKey="+KEY_VELIB)
             str_result = req.read().decode()
             dct_velib_json = json.loads(str_result)
-            sql_velib = 'INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update") VALUES ('+str(st)+','+str(id_meteo)+","+str(dct_velib_json['available_bike_stands'])+","+str(dct_velib_json['available_bikes'])+","+str(dct_velib_json['last_update'])+")"
+            sql_velib = 'INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update") VALUES ('+str(st)+','+str(id_meteo)+","+str(dct_velib_json['available_bike_stands'])+","+str(dct_velib_json['available_bikes'])+","+str(dct_velib_json['last_update']/1e3)+")"
             print(sql_velib)
             c.execute(sql_velib)
             conn.commit()
-        print("{} REQUETE {}/{} FIN \n".format(datetime.date.today().strftime("%Y-%m-%d %H:%M:%S"),
+        curr_time = time.time()
+        print("{} REQUETE {}/{} FIN \n".format(datetime.datetime.fromtimestamp(curr_time).strftime("%Y-%m-%d %H:%M:%S"),
         iReq, NB_REQ)) 
         iReq += 1
 
