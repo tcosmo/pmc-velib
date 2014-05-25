@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import datetime
 
-conn = sqlite3.connect('../data_velib.sqlite')
+conn = sqlite3.connect('data_velib.sqlite')
 c = conn.cursor()
 
 
