@@ -77,6 +77,17 @@ class PMC
             }
         }
 
+        int compte_poids()
+        {
+            int k = 0;
+            for(int i = 1 ; i < reseau.couches.size()  ; i++)
+            {
+                for(auto n : reseau.couches[i].neurones)
+                    k += n.poids.n_rows;
+            }
+            return k;
+        }
+
         Reseau reseau;
         double etha;
         vector<tuple<mat,mat>> base_appretissage;
