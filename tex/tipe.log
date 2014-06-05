@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.28)  5 JUN 2014 21:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.28)  5 JUN 2014 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,29 +210,81 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (14.53639pt too wide) in paragraph at lines 26--26
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 31.
+
+./tipe.tex:31: Undefined control sequence.
+l.31 $$\matcal
+              {B} = \{(p_1,q_1), \dots, (p_n, q_n)\} \quad \text{ avec : } \...
+
+? 
+./tipe.tex:31: Undefined control sequence.
+l.31 ...(p_1,q_1), \dots, (p_n, q_n)\} \quad \text
+                                                  { avec : } \quad (p_i,q_i)...
+
+? 
+./tipe.tex:31: Undefined control sequence.
+l.31 ...text{ avec : } \quad (p_i,q_i) \in \matcal
+                                                  {A}^a \times \matcal{B}^b$$
+? 
+./tipe.tex:31: Undefined control sequence.
+l.31 ... (p_i,q_i) \in \matcal{A}^a \times \matcal
+                                                  {B}^b$$
+? 
+./tipe.tex:33: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.33 Où $\matcal
+                 {A}$ et $\matcal{B}$ sont les espaces de départ et d'arriv...
+
+? 
+./tipe.tex:33: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.33 Où $\matcal{A}$ et $\matcal
+                                 {B}$ sont les espaces de départ et d'arriv...
+
+? 
+./tipe.tex:34: Undefined control sequence.
+l.34 Si on note $f:\matcal
+                          {A}\to \matcal{B}$ la fonction du réseau, notre b...
+
+? 
+./tipe.tex:34: Undefined control sequence.
+l.34 Si on note $f:\matcal{A}\to \matcal
+                                        {B}$ la fonction du réseau, notre b...
+
+? 
+
+Overfull \hbox (14.53639pt too wide) in paragraph at lines 42--42
 []\OT1/cmr/bx/n/14.4 L'application pra-tique : as-pects tech-niques
  []
 
 [2] (./tipe.aux) ) 
 Here is how much of TeX's memory you used:
- 3090 strings out of 493315
- 43515 string characters out of 6137903
- 109902 words of memory out of 5000000
- 6513 multiletter control sequences out of 15000+600000
- 8195 words of font info for 29 fonts, out of 8000000 for 9000
+ 3093 strings out of 493315
+ 43542 string characters out of 6137903
+ 110902 words of memory out of 5000000
+ 6516 multiletter control sequences out of 15000+600000
+ 7888 words of font info for 28 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,7n,23p,332b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb>
-Output written on tipe.pdf (2 pages, 53622 bytes).
+/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on tipe.pdf (2 pages, 97933 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

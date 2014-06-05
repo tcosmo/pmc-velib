@@ -23,6 +23,22 @@
 \section{Introduction}
 \section{La justification mathématiques}
 \section{L'algorithme de rétropropagation}
+
+On a donc vu que les réseaux de neurones présentent un modèle pertinent dans le cadre de la régression non linéaire.\\
+Il faut désormais mettre en place l'algorithme qui va permettre de trouver, d'apprendre, la combinaison de poids optimales afin de réaliser l'approximation désirée.\\
+On se donne une base d'apprentissage :
+
+$$\matcal{B} = \{(p_1,q_1), \dots, (p_n, q_n)\} \quad \text{ avec : } \quad (p_i,q_i) \in \matcal{A}^a \times \matcal{B}^b$$
+
+Où $\matcal{A}$ et $\matcal{B}$ sont les espaces de départ et d'arrivée et $a$ et $b$ leur dimension respective.\\
+Si on note $f:\matcal{A}\to \matcal{B}$ la fonction du réseau, notre but est d'avoir en un nombre fini d'itérations :
+
+$$ \forall i, \quad f(p_i) = q_i $$
+
+
+
+
+
 \section{L'application pratique : aspects techniques et résultats}
 
  
