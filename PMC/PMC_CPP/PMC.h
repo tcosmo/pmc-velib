@@ -56,10 +56,15 @@ class PMC
 
             reverse(sensibilite.begin(),sensibilite.end());
         }
-
+        
         void cycle_apprentissage(bool last = false)
         {
             random_shuffle(base_appretissage.begin(), base_appretissage.end());
+            
+            erreur_moyenne.clear();
+
+            for(auto a: get<1>(base_appretissage[0])) 
+                erreur_moyenne.push_back(0.0);
             
             for(auto couple: base_appretissage)
             {
@@ -75,6 +80,24 @@ class PMC
                         reseau.couches[k].neurones[i].biais += etha*sensibilite[k-1][i];
                     }
             }
+            for(auto couple: base_appretissage)
+            {
+                int i = 0;
+                reseau.calcule_sortie(get<0>(couple));
+                for(auto a: get<1>(couple))
+                {
+                    erreur_moyenne[i] += abs(reseau.sorties.back()[i]-a);
+                    i++;
+                }
+            }
+            int i = 0;
+            for(auto a: get<1>(base_appretissage[0]))
+            {
+                erreur_moyenne[i] /= base_appretissage.size();
+                i++;
+            }
+        
+            //cout << "e " << erreur_moyenne[0] << endl;
         }
 
         int compte_poids()
@@ -92,5 +115,5 @@ class PMC
         double etha;
         vector<tuple<mat,mat>> base_appretissage;
         vector<mat> sensibilite;
-        
+        vector<double> erreur_moyenne;
 };

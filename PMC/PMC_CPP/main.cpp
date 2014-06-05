@@ -66,7 +66,8 @@ static int callback(void *data, int argc, char **argv, char **azColName){
     if(f-last >= 30*60 || last == 0)
     {
         last = f;
-        base.push_back(make_tuple(normalize_entree(colvec({(double)ltm->tm_hour,(double)ltm->tm_min,(double)atof(argv[5]),(double)atof(argv[4])})),colvec(normalize_sortie({(double)atof(argv[1]),(double)atof(argv[2])}))));
+        if(base.size() <= 50)
+            base.push_back(make_tuple(normalize_entree(colvec({(double)ltm->tm_hour,(double)ltm->tm_min,(double)atof(argv[5]),(double)atof(argv[4])})),colvec(normalize_sortie({(double)atof(argv[1]),(double)atof(argv[2])}))));
     }
     //}
     //printf("\n");
@@ -103,7 +104,7 @@ int main()
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
         sqlite3_free(zErrMsg);
     }else{
-        fprintf(stdout,"%d %d\n", jkl, base.size());
+        fprintf(stdout,"Nombre de donnees dans la base du pmc : %d \nNombre de donnees au total : %d\n", base.size(),jkl);
         fprintf(stdout, "Operation done successfully\n");
     }
     
@@ -112,13 +113,13 @@ int main()
     Reseau r(get<0>(base[0]).n_rows);
 
     Couche C1;
-    for(int i = 0 ; i < 3 ; i++)
+    for(int i = 0 ; i < 5 ; i++)
         C1.neurones.push_back(Neurone(sigmoide,sigmoder));
 
     Couche C2; 
-    for(int i = 0 ; i < 2 ; i++)
+    for(int i = 0 ; i < 5 ; i++)
         C2.neurones.push_back(Neurone(sigmoide,sigmoder));
-    
+   
     Couche C3;
     for(int i = 0 ; i < 2 ; i++)
         C3.neurones.push_back(Neurone(sigmoide,sigmoder));
@@ -126,19 +127,29 @@ int main()
     r.couches.push_back(C1);
     r.couches.push_back(C2);
     r.couches.push_back(C3);
-    
-    PMC pmc(r,10,base); 
-    
-    for(int i = 0 ; i < 100 ; i++)
+   
+    //base = {make_tuple(colvec({0.1,0.3,-0.4,0.5}),colvec({0.1,0.3})), make_tuple(colvec({0.3,-0.98,-0.78,0.03}),colvec({0.5,0.6}))};
+
+    PMC pmc(r,4.0,base); 
+    int k = 0; 
+    while((pmc.erreur_moyenne.size() == 0 || pmc.erreur_moyenne[0] > 0.01))
+    {
+        //if(pmc.erreur_moyenne.size() != 0)
+          //  fprintf(stdout, "%f\n", pmc.erreur_moyenne[0]);
         pmc.cycle_apprentissage();
-    
-    freopen("data_pmc.data","w", stdout);
+        k++;
+    }
+
+    printf("Apprentissage en %d iterations\n Erreur moyenne %f\n", k, pmc.erreur_moyenne[0]);
+    //freopen("data_pmc.data","w", stdout);
     for(int i = 0 ; i < base.size() ; i++)
     {
         mat C = get<0>(base[i]);
         pmc.reseau.calcule_sortie(C);
-        cout << C << endl;
-        cout << pmc.reseau.sorties.back() << endl;
+        cout << "Entree : " << C << endl;
+        cout << "Sortie voulue : " << get<1>(base[i])[0] << endl;
+        cout << "Sortie rendue : " << double(pmc.reseau.sorties.back()[0]) << endl << endl;
+        //cout << pmc.reseau.sorties.back() << endl;
         //double velo = pmc.reseau.sorties.back()[0];
         //cout << denorm(velo) << endl;
     }
