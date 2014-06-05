@@ -24,6 +24,8 @@
 \section{La justification mathématiques}
 \section{L'algorithme de rétropropagation}
 
+\subsection{Réaliser l'apprentissage : comment minimiser l'erreur, quelle erreur ?}
+
 On a donc vu que les réseaux de neurones présentent un modèle pertinent dans le cadre de la régression non linéaire.\\
 Il faut désormais mettre en place l'algorithme qui va permettre de trouver, d'apprendre, la combinaison de poids optimales afin de réaliser l'approximation désirée.\\
 On se donne une base d'apprentissage :
@@ -65,7 +67,30 @@ $s^k$ est la sensibilité de la couche $k$, et $n^k$ le vecteur des niveaux d'ac
 \\
 \noident On a : $\Delta W^k = -\eta s^k * \,^t a^{k-1}$
 \\ Avec $W^k$ la matrice des poids de la $k^{\text{ième}}$ couche et $a^k$ le vecteur sortie de la $k^{\text{ième}}$ couche.
+\\Les sensibilités se calculent par récurrence (on ne donne pas la formule ici, on en parlera cependant à l'oral) d'où le nom de \emph{back propagation} : l'information doit se transmettre de la dernière couche vers la première pour calculer les sensibilités et non pas juste de la première vers la dernière comme lorsqu'on calcule la sortie associée à une entrée.
 
+\subsection{L'algorithme d'entraînement}
+
+\\ L'algorithme d'entraînement est donc le suivant : 
+
+\begin{enumerate}
+
+\item Initialiser tous les poids du réseau à des valeurs aléatoires.
+\item Pour chaque association $(p_i,q_i)$ dans la base d’apprentissage:
+\begin{itemize}
+	\item Propager les entrées $p_i$ vers l'avant
+	\item Rétropropager les sensibilités
+	\item Mettre à jour les poids
+\end{itemize}
+\item Si le critère d'arrêt est atteint, stop
+\item Recommencer à l'étape 2
+\end{enumerate}
+
+
+\\On appelle perceptron multicouche un réseau de neurones capable de réaliser un apprentissage à travers des algorithmes comparables (parfois plus subtils) à celui de \emph{back-propagation} proposé ici.
+
+\\De très nombreuses questions pratiques se posent alors : quel critère d'arrêt prendre ? Comment initialiser le réseau ? Comment adapter les entrées aux fonctions de transfert, ici principalement sigmoïde ?
+\\Ces questions sont traitées dans la partie suivante.
 
 \section{L'application pratique : aspects techniques et résultats}
 
