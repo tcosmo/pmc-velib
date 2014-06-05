@@ -31,12 +31,40 @@ On se donne une base d'apprentissage :
 $$\matcal{B} = \{(p_1,q_1), \dots, (p_n, q_n)\} \quad \text{ avec : } \quad (p_i,q_i) \in \matcal{A}^a \times \matcal{B}^b$$
 
 Où $\matcal{A}$ et $\matcal{B}$ sont les espaces de départ et d'arrivée et $a$ et $b$ leur dimension respective.\\
-Si on note $f:\matcal{A}\to \matcal{B}$ la fonction du réseau, notre but est d'avoir en un nombre fini d'itérations :
+Si on note $f:\matcal{A}\to \matcal{B}$ la fonction du réseau (variable au cours de l'apprentissage), notre but est d'avoir un algorithme tel qu'en un nombre fini d'itérations :
 
 $$ \forall i, \quad f(p_i) = q_i $$
 
+On va procéder à cet apprentissage par cycle de présentation de tous les couples de la base au réseau.\\
+Lors d'un cycle, on présente chaque couple au réseau, pour le ième couple on calcule le vecteur erreur instantanée $\vec{e} = q_i-f(p_i)$.\\
+On se donne comme critère de "bon apprentissage" de notre réseau, comme indice de performance l'erreur quadratique moyenne :
 
+$$ F(p_i)  = E[\,^t  \vec{e} * \vec{e}]$$
 
+L'espérance en question n'étant pas calculable a priori, on l'approxime l'indice de performance par l'erreur instantanée :
+
+$$  \hat{F}(p_i) = ^t \vec{e}*\vec{e}$$
+
+Ainsi notre but est de miniser la fonction $ \hat{F} $.
+On utilise pour cela la méthode de descente de gradient telle que : \\
+
+$$ 
+	\Delta \omega^{k}_{i,j} = -\etha \frac{\partial \hat{F}}{\partial \omega^{k}_{i,j}}
+$$
+
+Avec $ \omega^{k}_{i,j}$ le $j^{\text{ième}}$ poids du $i^{\text{ième}}$ neurone de la $k^{\text{ième}}$ couche, $\eta$ le taux d'apprentissage.\\
+Le sujet de cet exposé n'étant pas la descente de gradient, on introduira très briévement à l'oral les notions permettant de comprendre la suite.\\
+Calculer les dérivées partielles de $\hat{F}$ n'est pas un problème simple.
+\\ On expliquera à l'oral les principales étapes de ce calcul.
+\\ On donne ici uniquement l'expression final qui jsutifie l'algorithme proposé par la suite.
+
+\\ On introduit une quantité intermédiraire appelée sensibilité, associée à chaque couche, définie vectoriellement par : 
+
+$$ s^k = \frac{\partial \hat{F} }{\partial{n^k}}$$
+$s^k$ est la sensibilité de la couche $k$, et $n^k$ le vecteur des niveaux d'activation de la $k^{\text{ième}}$ couche.
+\\
+\noident On a : $\Delta W^k = -\eta s^k * \,^t a^{k-1}$
+\\ Avec $W^k$ la matrice des poids de la $k^{\text{ième}}$ couche et $a^k$ le vecteur sortie de la $k^{\text{ième}}$ couche.
 
 
 \section{L'application pratique : aspects techniques et résultats}

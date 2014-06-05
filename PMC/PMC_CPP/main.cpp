@@ -66,7 +66,7 @@ static int callback(void *data, int argc, char **argv, char **azColName){
     if(f-last >= 30*60 || last == 0)
     {
         last = f;
-        if(base.size() <= 10)
+        if(base.size() <= 24)
             base.push_back(make_tuple(normalize_entree(colvec({(double)ltm->tm_hour,(double)ltm->tm_min,(double)atof(argv[5]),(double)atof(argv[4])})),colvec(normalize_sortie({(double)atof(argv[1]),(double)atof(argv[2])}))));
     }
     //}
