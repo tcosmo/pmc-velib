@@ -66,7 +66,7 @@ static int callback(void *data, int argc, char **argv, char **azColName){
     if(f-last >= 30*60 || last == 0)
     {
         last = f;
-        if(base.size() <= 50)
+        if(base.size() <= 10)
             base.push_back(make_tuple(normalize_entree(colvec({(double)ltm->tm_hour,(double)ltm->tm_min,(double)atof(argv[5]),(double)atof(argv[4])})),colvec(normalize_sortie({(double)atof(argv[1]),(double)atof(argv[2])}))));
     }
     //}
@@ -130,9 +130,9 @@ int main()
    
     //base = {make_tuple(colvec({0.1,0.3,-0.4,0.5}),colvec({0.1,0.3})), make_tuple(colvec({0.3,-0.98,-0.78,0.03}),colvec({0.5,0.6}))};
 
-    PMC pmc(r,4.0,base); 
+    PMC pmc(r,2.0,base); 
     int k = 0; 
-    while((pmc.erreur_moyenne.size() == 0 || pmc.erreur_moyenne[0] > 0.01))
+    while((pmc.erreur_moyenne.size() == 0 || pmc.erreur_moyenne[0] > 0.001))
     {
         //if(pmc.erreur_moyenne.size() != 0)
           //  fprintf(stdout, "%f\n", pmc.erreur_moyenne[0]);
@@ -154,6 +154,7 @@ int main()
         //cout << denorm(velo) << endl;
     }
 
-    
+
+
     return 0;
 }

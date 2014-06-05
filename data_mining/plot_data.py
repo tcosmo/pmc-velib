@@ -37,7 +37,7 @@ for i in range(2):
             #AND request_time BETWEEN "+str(deb)+ " AND "+str(fin)):
                 add = str(res[2])
                 cap = int(res[3])
-                if res[0] - last > 60 or last == 0:
+                if res[0] - last > 60*60 or last == 0:
                     m +=1
                     last = res[0]
                     x.append(datetime.datetime.fromtimestamp(res[0]))

@@ -100,6 +100,13 @@ class PMC
             //cout << "e " << erreur_moyenne[0] << endl;
         }
 
+        void save_reseau(string name)
+        {
+                
+        
+
+        }
+
         int compte_poids()
         {
             int k = 0;
