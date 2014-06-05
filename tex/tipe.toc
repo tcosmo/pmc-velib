@@ -1,5 +1,5 @@
 \select@language {french}
-\contentsline {part}{I\hspace {1em}Introduction}{2}
-\contentsline {part}{II\hspace {1em}La justification math\IeC {\'e}matiques}{2}
-\contentsline {part}{III\hspace {1em}L'algorithme de r\IeC {\'e}tropropagation}{2}
-\contentsline {part}{IV\hspace {1em}L'application pratique : aspects techniques et r\IeC {\'e}sultats}{2}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}La justification math\IeC {\'e}matiques}{2}
+\contentsline {section}{\numberline {3}L'algorithme de r\IeC {\'e}tropropagation}{2}
+\contentsline {section}{\numberline {4}L'application pratique : aspects techniques et r\IeC {\'e}sultats}{2}
