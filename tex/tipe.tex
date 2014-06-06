@@ -4,6 +4,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{graphicx}
 \usepackage[frenchb]{babel}
+\usepackage{amsfonts}
  
 \begin{document}
  
@@ -98,11 +99,50 @@ $s^k$ est la sensibilité de la couche $k$, et $n^k$ le vecteur des niveaux d'ac
 
 \subsection{Considérations pratiques quant à l'apprentissage}
 	\subsubsection{Entraîner le réseau}
+	Pour réaliser l'apprentissage pratique on doit tout d'abord normaliser les données d'entrée et de sortie.
+	\\Les contraintes de normalisation sont données par les fonctions de transfert utilisées. Ici des sigmoides $\mathbb{R} \to [0;1]$
+	\\En pratique la convergence vers les asymptotes étant très rapide on normalise l'entrée dans $[-1,1]$
+	\\Une autre considération pratique dont on doit tenir compte lorsqu’on entraîne un PMC concerne le phénomène de saturation des neurones où, sous certaines conditions, les neurones peuvent contrairement à toute fin pratique cesser d’apprendre tellement leur convergence devient lente. Pour éviter cela on normalise la sortie dans $[0.05, 0.95]$. On pourra détailler à l'oral.
+	
+	\\Il faut de plus se donner un critère d'arrêt satisfaisant : quand est ce que l'on juge que le réseau à suffisament appris ?
+	\\Il faut pour cela considérer le phénomène de sur-apprentissage. Il peut arriver que le réseau est si bien appris un échantillon d'entrée qu'il devienne sensible au bruit spécifique
+	à cet échantillon et qu'il perde son aptitude à prédire d'autres sorties.
+	\\Pour éviter cela, on se donne deux échantillons : un échantillon d'apprentissage et un échantillon de validation. À la fin de chaque cycle d'apprentissage on présente au réseau les données de validation. Le critère d’arrêt consiste alors à stopper l’apprentissage lorsque l’indice de performance calculé sur les données de validation cesse de s’améliorer pendant plusieurs périodes d’entraînement. Il s'agit d'une technique dite de \emph{cross-validation}.
+	
+	\includegraphics[width=270]{cross_valid.png}
+	
 	\subsubsection{Quelques mots d'implémentation}
+	
+	La programmation orientée objet a été très pratique dans l'implémentation du réseau.
+	\\Trois classes ont été utilisées : Neurone, Couche, Reseau. On comprend le lien entre elles, un objet Neurone est élémentaire (contient notamment ses poids), une couche contient des neurones et un réseau des couches.
+	
+	\\Python a d'abord été utilisé pour sa simplicité. Toutefois, l'apprentissage requérant un temps de calcul très important (voir résultats), une implémentation en \emph{c++} a du être réalisée.
 \subsection{Application : le problème des vélibs}
+\subsubsection{Définition du perceptron utilisé}
+
+Nous souhaitions d'abord modéliser l'ensemble de la consommation de vélib parisienne mais nous avons vu nos ambitions à la baisse, il y'a plus de 900 stations de velib.
+En terme de calcul c'est gigantesque.
+\\Nous proposons ici la modélisation de la consommation par rapport à une seule station au comportement rationnel (modélisable) : il s'agit d'une station en face de Jussieu donc au comportement rythmé, dans les jours de semaine par la vie des étudiants.
+\\Ainsi on se limite aux jours de la semaine sans les week end. L'entrée de notre réseau est un quadruplet qui contient dans l'ordre : l'heure de la journée, un booleen qui indique si l'on est à l'heure ou à la demi heure, la pluviométrie correspondante à cette heure et la température. Éléments qui nous paraissent intuitivement être significatif dans la consommation de vélib.
+
+\\L'approximation universelle ne recquiert qu'une seule couche cachée. On prend donc une seule couche cachée avec, arbitrairement 5 neurones. En sortie on souhaite modéliser le nombre de vélos présent et le nombre de stand libres (la somme doit être constante). Donc deux neurones sur la couche de sortie.
+
 	\subsubsection{Le data-mining et la base de données}
-	\subsubsection{Définition du perceptron utilisé}
+
+Un autre problème pratique est le fait de pouvoir avoir des données d'entraînement.
+Il se trouve que les données des velibs sont en open data, on peut avoir à tout instant le nombre de vélos restants dans chaque station de paris.
+\\Il a fallu en parallèle relever la météo associée à ces requêtes.
+\\Tout cela a été fait en python (urllib) en utilisant les api de jcd et d'un organisme libre de météo.
+
+\\Les données ont été stockées dans la base de données suivant le format suivant :
+\\
+\\
+\\
+
+Le programme du perceptron communique directement par la base de donnée via sqlite (module sqlite3 python, équivalent en cpp).
+
 \subsection{Analyse des résultats}
+Partie complétée pour mardi.
 	\subsubsection{Résultats}
 	\subsubsection{Limites et potentialités}
 	
