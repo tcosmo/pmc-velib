@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.28)  6 JUN 2014 12:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.28)  6 JUN 2014 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**tipe.tex
-(./tipe.tex
+**TIPE.tex
+(./TIPE.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
@@ -108,21 +108,21 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(./tipe.aux)
-\openout1 = `tipe.aux'.
+(./TIPE.aux)
+\openout1 = `TIPE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -187,412 +187,110 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 9.
-LaTeX Info: Redefining \dots on input line 9.
-LaTeX Info: Redefining \up on input line 9.
+LaTeX Info: Redefining \degres on input line 11.
+LaTeX Info: Redefining \dots on input line 11.
+LaTeX Info: Redefining \up on input line 11.
 
 
 Package frenchb.ldf Warning: OT1 encoding should not be used for French. 
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(frenchb.ldf)                of your document, on input line 9.
+(frenchb.ldf)                of your document, on input line 11.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./tipe.tex:15: Undefined control sequence.
+./TIPE.tex:17: Undefined control sequence.
 \@author ...lle Chanial, Tristan Du Castel, \text 
                                                   {Tristan Stérin}
-l.15 \maketitle
+l.17 \maketitle
                
 ? s
 OK, entering \scrollmode...
-(/usr/local/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) (./tipe.toc)
+(./TIPE.toc)
 \tf@toc=\write3
-\openout3 = `tipe.toc'.
+\openout3 = `TIPE.toc'.
 
-
-[1
+ [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./tipe.tex:36: Undefined control sequence.
-l.36 $$\matcal
-              {B} = \{(p_1,q_1), \dots, (p_n, q_n)\} \quad \text{ avec : } \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./tipe.tex:36: Undefined control sequence.
-l.36 ...(p_1,q_1), \dots, (p_n, q_n)\} \quad \text
-                                                  { avec : } \quad (p_i,q_i)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Command \^ invalid in math mode on input line 27.
 
-./tipe.tex:36: Undefined control sequence.
-l.36 ...text{ avec : } \quad (p_i,q_i) \in \matcal
-                                                  {A}^a \times \matcal{B}^b$$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+./TIPE.tex:27: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.27 ...ppelle une régression non linéaire $boî
+                                                  te\ noire$. Les réseaux d...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
 
-./tipe.tex:36: Undefined control sequence.
-l.36 ... (p_i,q_i) \in \matcal{A}^a \times \matcal
-                                                  {B}^b$$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./tipe.tex:38: Undefined control sequence.
-<recently read> \matcal 
-                        
-l.38 Où $\matcal
-                 {A}$ et $\matcal{B}$ sont les espaces de départ et d'arriv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./tipe.tex:38: Undefined control sequence.
-<recently read> \matcal 
-                        
-l.38 Où $\matcal{A}$ et $\matcal
-                                 {B}$ sont les espaces de départ et d'arriv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./tipe.tex:39: Undefined control sequence.
-l.39 Si on note $f:\matcal
-                          {A}\to \matcal{B}$ la fonction du réseau (variabl...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./tipe.tex:39: Undefined control sequence.
-l.39 Si on note $f:\matcal{A}\to \matcal
-                                        {B}$ la fonction du réseau (variabl...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+./TIPE.tex:27: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.27 ...ppelle une régression non linéaire $boî
+                                                  te\ noire$. Les réseaux d...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+LaTeX Warning: Command \i invalid in math mode on input line 27.
 
+./TIPE.tex:27: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.27 ...ppelle une régression non linéaire $boî
+                                                  te\ noire$. Les réseaux d...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./TIPE.tex:27: Missing } inserted.
+<inserted text> 
+                }
+l.27 ... régression non linéaire $boîte\ noire$
+                                                  . Les réseaux de neurones...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmex10!
+
+Overfull \hbox (18.2318pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/10.95 sta-tion donn^^See? Plus lar-ge-ment, com-ment mod^^Seliser 
+la dy-na-mique de r^^Separtition
  []
 
-./tipe.tex:57: Undefined control sequence.
-l.57 	\Delta \omega^{k}_{i,j} = -\etha
-                                       \frac{\partial \hat{F}}{\partial \ome...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./tipe.tex:60: Undefined control sequence.
-l.60 Avec $ \omega^{k}_{i,j}$ le $j^{\text
-                                          {ième}}$ poids du $i^{\text{ième...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (5.70009pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/10.95 des Ve-lib'? Un tel probl^^Reme ne sau-rait suivre une loi e
+nti^^Rerement d^^Seterministe.
+ []
 
-
-LaTeX Warning: Command \` invalid in math mode on input line 60.
-
-./tipe.tex:60: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.60 Avec $ \omega^{k}_{i,j}$ le $j^{\text{iè
-                                              me}}$ poids du $i^{\text{ième...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:60: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.60 Avec $ \omega^{k}_{i,j}$ le $j^{\text{iè
-                                              me}}$ poids du $i^{\text{ième...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
-./tipe.tex:60: Undefined control sequence.
-l.60 ...$ le $j^{\text{ième}}$ poids du $i^{\text
-                                                  {ième}}$ neurone de la $k...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 60.
-
-./tipe.tex:60: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.60 ... $j^{\text{ième}}$ poids du $i^{\text{iè
-                                                  me}}$ neurone de la $k^{\t...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:60: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.60 ... $j^{\text{ième}}$ poids du $i^{\text{iè
-                                                  me}}$ neurone de la $k^{\t...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
-./tipe.tex:60: Undefined control sequence.
-l.60 ...$i^{\text{ième}}$ neurone de la $k^{\text
-                                                  {ième}}$ couche, $\eta$ l...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 60.
-
-./tipe.tex:60: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.60 ...\text{ième}}$ neurone de la $k^{\text{iè
-                                                  me}}$ couche, $\eta$ le ta...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:60: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.60 ...\text{ième}}$ neurone de la $k^{\text{iè
-                                                  me}}$ couche, $\eta$ le ta...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
-./tipe.tex:66: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 \\ O
-         n introduit une quantité intermédiraire appelée sensibilité, as...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./tipe.tex:69: Undefined control sequence.
-l.69 ...r des niveaux d'activation de la $k^{\text
-                                                  {ième}}$ couche.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 69.
-
-./tipe.tex:69: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.69 ...s niveaux d'activation de la $k^{\text{iè
-                                                  me}}$ couche.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:69: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.69 ...s niveaux d'activation de la $k^{\text{iè
-                                                  me}}$ couche.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
-./tipe.tex:71: Undefined control sequence.
-<recently read> \noident 
-                         
-l.71 \noident
-              On a : $\Delta W^k = -\eta s^k * \,^t a^{k-1}$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./tipe.tex:72: Undefined control sequence.
-l.72 ...$W^k$ la matrice des poids de la $k^{\text
-                                                  {ième}}$ couche et $a^k$ ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 72.
-
-./tipe.tex:72: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.72 ...$ la matrice des poids de la $k^{\text{iè
-                                                  me}}$ couche et $a^k$ le v...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:72: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.72 ...$ la matrice des poids de la $k^{\text{iè
-                                                  me}}$ couche et $a^k$ le v...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
-./tipe.tex:72: Undefined control sequence.
-l.72 ...et $a^k$ le vecteur sortie de la $k^{\text
-                                                  {ième}}$ couche.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 72.
-
-./tipe.tex:72: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.72 ...a^k$ le vecteur sortie de la $k^{\text{iè
-                                                  me}}$ couche.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./tipe.tex:72: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.72 ...a^k$ le vecteur sortie de la $k^{\text{iè
-                                                  me}}$ couche.
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no � in font cmex7!
-
-./tipe.tex:77: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \\ L
-         'algorithme d'entraînement est donc le suivant :
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-
-./tipe.tex:93: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \\O
-        n appelle perceptron multicouche un réseau de neurones capable de r...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./tipe.tex:95: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 \\D
-        e très nombreuses questions pratiques se posent alors : quel critè...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (14.53639pt too wide) in paragraph at lines 98--98
-[]\OT1/cmr/bx/n/14.4 L'application pra-tique : as-pects tech-niques
  []
 
-[3]
-
-./tipe.tex:107: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 	\\I
-          l faut de plus se donner un critère d'arrêt satisfaisant : quand...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<cross_valid.png, id=23, 532.99126pt x 333.245pt>
-./tipe.tex:112: Illegal unit of measure (pt inserted).
+<neuroneformel.png, id=15, 316.18124pt x 254.9525pt>
+./TIPE.tex:35: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.112 ...cludegraphics[width=270]{cross_valid.png}
+l.35 ...ludegraphics[width=200]{neuroneformel.png}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -601,10 +299,594 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./tipe.tex:112: Illegal unit of measure (pt inserted).
+./TIPE.tex:35: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.112 ...cludegraphics[width=270]{cross_valid.png}
+l.35 ...ludegraphics[width=200]{neuroneformel.png}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+File: neuroneformel.png Graphic file (type png)
+<use neuroneformel.png>
+Package pdftex.def Info: neuroneformel.png used on input line 35.
+(pdftex.def)             Requested size: 200.0pt x 161.27058pt.
+
+
+./TIPE.tex:39: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 L
+      e neurone formel effectue une combinaison linéaire de ses entrées do...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./TIPE.tex:39: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.39 ...nction d'activation. Si l'on note $\matcal
+                                                  {p}=(p_1, \dots,p_R)$ le v...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:39: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.39 ...ecteur des entrées du neurone et $\matcal
+                                                  {w}=(w_1, \dots,w_r)$ le v...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./TIPE.tex:41: LaTeX Error: \mathbb allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ... $f$ est une fonction continue sur \mathbb
+                                                  {R} telle que :
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TIPE.tex:47: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.47 $
+      $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (7.70757pt too wide) in paragraph at lines 47--49
+\OT1/cmr/m/n/10.95 Les fonc-tions d'ac-ti-va-tion usuelles sont la fonc-tion se
+uil et la fonc-tion sigmo^^?^^Pde.
+ []
+
+<sigmoide.png, id=17, 374.39874pt x 360.34625pt>
+./TIPE.tex:51: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.51 \includegraphics[width=170]{sigmoide.png}
+                                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./TIPE.tex:51: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.51 \includegraphics[width=170]{sigmoide.png}
+                                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+File: sigmoide.png Graphic file (type png)
+<use sigmoide.png>
+Package pdftex.def Info: sigmoide.png used on input line 51.
+(pdftex.def)             Requested size: 170.0pt x 163.62239pt.
+ [3 <./neuroneformel.png>]
+
+./TIPE.tex:54: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 U
+      ne analogie avec les réseaux de neurones humains montre que les poids...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<multicouches.png, id=28, 640.3925pt x 206.7725pt>
+./TIPE.tex:65: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.65 ...cs[width=400,height=150]{multicouches.png}
+                                                   \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./TIPE.tex:65: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.65 ...cs[width=400,height=150]{multicouches.png}
+                                                   \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+File: multicouches.png Graphic file (type png)
+<use multicouches.png>
+Package pdftex.def Info: multicouches.png used on input line 65.
+(pdftex.def)             Requested size: 400.00981pt x 150.00244pt.
+
+Overfull \hbox (40.00981pt too wide) in paragraph at lines 65--65
+ [] 
+ []
+
+[4 <./sigmoide.png> <./multicouches.png>]
+
+LaTeX Warning: Command \' invalid in math mode on input line 76.
+
+./TIPE.tex:76: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.76 ...que nous considérons explicatifs ($entré
+                                                  es$) et le nombre de vélo...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:76: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.76 ...que nous considérons explicatifs ($entré
+                                                  es$) et le nombre de vélo...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex10!
+\c@thm=\count99
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+./TIPE.tex:81: Undefined control sequence.
+l.81 ...proximée par une fonction d'activation \f
+                                                   (typiquement une sigmoïd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+
+ []
+
+[5]
+./TIPE.tex:94: Undefined control sequence.
+l.94 $$\matcal
+              {B} = \{(p_1,q_1), \dots, (p_n, q_n)\} \quad \text{ avec : } \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:94: Undefined control sequence.
+l.94 ...(p_1,q_1), \dots, (p_n, q_n)\} \quad \text
+                                                  { avec : } \quad (p_i,q_i)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:94: Undefined control sequence.
+l.94 ...text{ avec : } \quad (p_i,q_i) \in \matcal
+                                                  {A}^a \times \matcal{B}^b$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:94: Undefined control sequence.
+l.94 ... (p_i,q_i) \in \matcal{A}^a \times \matcal
+                                                  {B}^b$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:96: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.96 Où $\matcal
+                 {A}$ et $\matcal{B}$ sont les espaces de départ et d'arriv...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:96: Undefined control sequence.
+<recently read> \matcal 
+                        
+l.96 Où $\matcal{A}$ et $\matcal
+                                 {B}$ sont les espaces de départ et d'arriv...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:97: Undefined control sequence.
+l.97 Si on note $f:\matcal
+                          {A}\to \matcal{B}$ la fonction du réseau (variabl...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:97: Undefined control sequence.
+l.97 Si on note $f:\matcal{A}\to \matcal
+                                        {B}$ la fonction du réseau (variabl...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
+
+ []
+
+./TIPE.tex:115: Undefined control sequence.
+l.115 	\Delta \omega^{k}_{i,j} = -\etha
+                                        \frac{\partial \hat{F}}{\partial \om...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:118: Undefined control sequence.
+l.118 Avec $ \omega^{k}_{i,j}$ le $j^{\text
+                                           {ième}}$ poids du $i^{\text{ièm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 118.
+
+./TIPE.tex:118: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.118 Avec $ \omega^{k}_{i,j}$ le $j^{\text{iè
+                                               me}}$ poids du $i^{\text{ièm...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:118: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.118 Avec $ \omega^{k}_{i,j}$ le $j^{\text{iè
+                                               me}}$ poids du $i^{\text{ièm...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+./TIPE.tex:118: Undefined control sequence.
+l.118 ... le $j^{\text{ième}}$ poids du $i^{\text
+                                                  {ième}}$ neurone de la $k...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 118.
+
+./TIPE.tex:118: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.118 ...$j^{\text{ième}}$ poids du $i^{\text{iè
+                                                  me}}$ neurone de la $k^{\t...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:118: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.118 ...$j^{\text{ième}}$ poids du $i^{\text{iè
+                                                  me}}$ neurone de la $k^{\t...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+./TIPE.tex:118: Undefined control sequence.
+l.118 ...i^{\text{ième}}$ neurone de la $k^{\text
+                                                  {ième}}$ couche, $\eta$ l...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 118.
+
+./TIPE.tex:118: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.118 ...text{ième}}$ neurone de la $k^{\text{iè
+                                                  me}}$ couche, $\eta$ le ta...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:118: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.118 ...text{ième}}$ neurone de la $k^{\text{iè
+                                                  me}}$ couche, $\eta$ le ta...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+[6]
+
+./TIPE.tex:124: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \\ O
+          n introduit une quantité intermédiaire appelée sensibilité, as...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./TIPE.tex:127: Undefined control sequence.
+l.127 ... des niveaux d'activation de la $k^{\text
+                                                  {ième}}$ couche.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 127.
+
+./TIPE.tex:127: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.127 ... niveaux d'activation de la $k^{\text{iè
+                                                  me}}$ couche.
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:127: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.127 ... niveaux d'activation de la $k^{\text{iè
+                                                  me}}$ couche.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+./TIPE.tex:129: Undefined control sequence.
+<recently read> \noident 
+                         
+l.129 \noident
+               On a : $\Delta W^k = -\eta s^k * \,^t a^{k-1}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TIPE.tex:130: Undefined control sequence.
+l.130 ...W^k$ la matrice des poids de la $k^{\text
+                                                  {ième}}$ couche et $a^k$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 130.
+
+./TIPE.tex:130: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.130 ... la matrice des poids de la $k^{\text{iè
+                                                  me}}$ couche et $a^k$ le v...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:130: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.130 ... la matrice des poids de la $k^{\text{iè
+                                                  me}}$ couche et $a^k$ le v...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+./TIPE.tex:130: Undefined control sequence.
+l.130 ...t $a^k$ le vecteur sortie de la $k^{\text
+                                                  {ième}}$ couche.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 130.
+
+./TIPE.tex:130: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.130 ...^k$ le vecteur sortie de la $k^{\text{iè
+                                                  me}}$ couche.
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./TIPE.tex:130: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.130 ...^k$ le vecteur sortie de la $k^{\text{iè
+                                                  me}}$ couche.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex8!
+
+./TIPE.tex:135: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \\ L
+          'algorithme d'entraînement est donc le suivant :
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+
+./TIPE.tex:151: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 \\O
+         n appelle perceptron multicouche (PMC) un réseau de neurones capab...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./TIPE.tex:153: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \\D
+         e très nombreuses questions pratiques se posent alors : quel crit�...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (2.14139pt too wide) in paragraph at lines 153--155
+\OT1/cmr/m/n/10.95 d'arr^et prendre? Com-ment ini-tia-li-ser le r^^Seseau? Com-
+ment adap-ter les entr^^Sees
+ []
+
+[7]
+
+./TIPE.tex:165: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 	\\I
+          l faut de plus se donner un critère d'arrêt satisfaisant : quand...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<cross_valid.png, id=45, 532.99126pt x 333.245pt>
+./TIPE.tex:170: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.170 ...cludegraphics[width=270]{cross_valid.png}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./TIPE.tex:170: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.170 ...cludegraphics[width=270]{cross_valid.png}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -615,23 +897,23 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 File: cross_valid.png Graphic file (type png)
 <use cross_valid.png>
-Package pdftex.def Info: cross_valid.png used on input line 112.
+Package pdftex.def Info: cross_valid.png used on input line 170.
 (pdftex.def)             Requested size: 270.0pt x 168.81876pt.
 
-Overfull \hbox (29.0285pt too wide) in paragraph at lines 116--118
-[]\OT1/cmr/m/n/10 La pro-gram-ma-tion orient^^See ob-jet a ^^Set^^Se tr^^Res pr
-a-tique dans l'impl^^Sementation
+Overfull \hbox (6.6096pt too wide) in paragraph at lines 174--176
+[]\OT1/cmr/m/n/10.95 La pro-gram-ma-tion orient^^See ob-jet a ^^Set^^Se tr^^Res
+ pra-tique dans l'impl^^Sementation
  []
 
-[4 <./cross_valid.png>]
+[8 <./cross_valid.png>]
 
-./tipe.tex:119: LaTeX Error: There's no line here to end.
+./TIPE.tex:177: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 	\\P
+l.177 	\\P
           ython a d'abord été utilisé pour sa simplicité. Toutefois, l'a...
 
 Your command was ignored.
@@ -639,13 +921,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./tipe.tex:128: LaTeX Error: There's no line here to end.
+./TIPE.tex:186: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 \\L
+l.186 \\L
          'approximation universelle ne recquiert qu'une seule couche cachée...
 
 Your command was ignored.
@@ -653,19 +935,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2.33391pt too wide) in paragraph at lines 128--129
-[]\OT1/cmr/m/n/10 L'approximation uni-ver-selle ne rec-quiert qu'une seule couc
-he cach^^See.
- []
-
-
-./tipe.tex:137: LaTeX Error: There's no line here to end.
+./TIPE.tex:195: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \\L
+l.195 \\L
          es données ont été stockées dans la base de données suivant le...
 
 Your command was ignored.
@@ -673,46 +949,47 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
-[5] [6] (./tipe.aux) ) 
+[9] [10] (./TIPE.aux) ) 
 Here is how much of TeX's memory you used:
- 3458 strings out of 493315
- 47982 string characters out of 6137903
+ 3472 strings out of 493315
+ 48253 string characters out of 6137903
  115360 words of memory out of 5000000
- 6857 multiletter control sequences out of 15000+600000
- 12457 words of font info for 48 fonts, out of 8000000 for 9000
+ 6870 multiletter control sequences out of 15000+600000
+ 11698 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,24p,519b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+ 38i,7n,24p,1019b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+nts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+mr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
 pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on tipe.pdf (6 pages, 156900 bytes).
+Output written on TIPE.pdf (10 pages, 225588 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
