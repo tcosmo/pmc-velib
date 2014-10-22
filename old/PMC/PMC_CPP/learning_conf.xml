@@ -1,0 +1,7 @@
+<db path="data_velib.sqlite"\>
+<learning_base begin="1401131865.28258" end="1401287708.583986"\>
+<validation_base begin="1401682018.0387065" end="1401790341.953328"\>
+<learning_speed val="9.4"\>
+
+<in val="4">
+	<column name="

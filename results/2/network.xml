@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<Reseau couche="4" entree="3" sortie="2" etha="10">
+    <Couche neurones="5">
+        <Neurone biais="-0.498543">
+            <Poids val="0.256402" />
+            <Poids val="0.351071" />
+            <Poids val="0.443536" />
+        </Neurone>
+        <Neurone biais="-0.194398">
+            <Poids val="-0.016409" />
+            <Poids val="0.213387" />
+            <Poids val="0.387268" />
+        </Neurone>
+        <Neurone biais="0.221556">
+            <Poids val="-0.243911" />
+            <Poids val="-0.405287" />
+            <Poids val="0.336956" />
+        </Neurone>
+        <Neurone biais="-0.370107">
+            <Poids val="-0.305987" />
+            <Poids val="0.282245" />
+            <Poids val="-0.309893" />
+        </Neurone>
+        <Neurone biais="-0.0189807">
+            <Poids val="-0.383351" />
+            <Poids val="0.0236802" />
+            <Poids val="-0.007855" />
+        </Neurone>
+    </Couche>
+    <Couche neurones="9">
+        <Neurone biais="0.167622">
+            <Poids val="-0.00891951" />
+            <Poids val="0.0900409" />
+            <Poids val="0.317376" />
+            <Poids val="0.146372" />
+            <Poids val="0.0782512" />
+        </Neurone>
+        <Neurone biais="0.270032">
+            <Poids val="0.224775" />
+            <Poids val="-0.213464" />
+            <Poids val="0.307255" />
+            <Poids val="0.0336466" />
+            <Poids val="0.498142" />
+        </Neurone>
+        <Neurone biais="-0.0784007">
+            <Poids val="0.424007" />
+            <Poids val="0.291368" />
+            <Poids val="0.028779" />
+            <Poids val="-0.311342" />
+            <Poids val="0.272917" />
+        </Neurone>
+        <Neurone biais="0.26921">
+            <Poids val="0.319315" />
+            <Poids val="-0.271623" />
+            <Poids val="-0.166703" />
+            <Poids val="0.218084" />
+            <Poids val="0.340886" />
+        </Neurone>
+        <Neurone biais="0.0911789">
+            <Poids val="-0.390387" />
+            <Poids val="-0.242323" />
+            <Poids val="0.274125" />
+            <Poids val="0.212949" />
+            <Poids val="0.027256" />
+        </Neurone>
+        <Neurone biais="-0.243875">
+            <Poids val="0.443833" />
+            <Poids val="-0.49315" />
+            <Poids val="-0.366313" />
+            <Poids val="0.375223" />
+            <Poids val="0.37239" />
+        </Neurone>
+        <Neurone biais="-0.0465861">
+            <Poids val="0.198501" />
+            <Poids val="0.214236" />
+            <Poids val="-0.339047" />
+            <Poids val="-0.365609" />
+            <Poids val="0.209077" />
+        </Neurone>
+        <Neurone biais="-0.0746472">
+            <Poids val="0.027945" />
+            <Poids val="-0.328174" />
+            <Poids val="0.382798" />
+            <Poids val="-0.320319" />
+            <Poids val="0.399293" />
+        </Neurone>
+        <Neurone biais="0.124444">
+            <Poids val="0.404563" />
+            <Poids val="0.486559" />
+            <Poids val="-0.395407" />
+            <Poids val="0.388767" />
+            <Poids val="0.000304878" />
+        </Neurone>
+    </Couche>
+    <Couche neurones="2">
+        <Neurone biais="-0.186979">
+            <Poids val="-0.46284" />
+            <Poids val="0.052195" />
+            <Poids val="0.241604" />
+            <Poids val="-0.360645" />
+            <Poids val="-0.359925" />
+            <Poids val="-0.261297" />
+            <Poids val="0.374637" />
+            <Poids val="-0.469888" />
+            <Poids val="-0.40395" />
+        </Neurone>
+        <Neurone biais="-0.169705">
+            <Poids val="0.439982" />
+            <Poids val="-0.228705" />
+            <Poids val="0.159808" />
+            <Poids val="-0.112338" />
+            <Poids val="-0.0583606" />
+            <Poids val="0.133189" />
+            <Poids val="-0.485558" />
+            <Poids val="0.22369" />
+            <Poids val="-0.442088" />
+        </Neurone>
+    </Couche>
+</Reseau>

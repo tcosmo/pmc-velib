@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<Reseau couche="3" entree="4" sortie="2">
+    <!--[1401131865.282588, 1401287708.583986]  = apprentissage 
+ [1401913296.0638773, 1402081178.83343]  = validation
+34140 0.010974 0.0107185
+
+-->
+    <Couche neurones="5">
+        <Neurone biais="3.23539">
+            <Poids val="-21.8256" />
+            <Poids val="-1.41959" />
+            <Poids val="-0.145433" />
+            <Poids val="-1.22906" />
+        </Neurone>
+        <Neurone biais="5.23045">
+            <Poids val="5.61209" />
+            <Poids val="0.185237" />
+            <Poids val="0.724294" />
+            <Poids val="0.385266" />
+        </Neurone>
+        <Neurone biais="10.6274">
+            <Poids val="-9.76813" />
+            <Poids val="-0.639365" />
+            <Poids val="-0.602685" />
+            <Poids val="2.40291" />
+        </Neurone>
+        <Neurone biais="2.73114">
+            <Poids val="9.66395" />
+            <Poids val="-2.25759" />
+            <Poids val="-3.01978" />
+            <Poids val="-4.9588" />
+        </Neurone>
+        <Neurone biais="2.64117">
+            <Poids val="9.40521" />
+            <Poids val="-1.21876" />
+            <Poids val="-2.81978" />
+            <Poids val="-3.70982" />
+        </Neurone>
+    </Couche>
+    <Couche neurones="2">
+        <Neurone biais="-4.78658">
+            <Poids val="-6.77714" />
+            <Poids val="5.69513" />
+            <Poids val="4.20864" />
+            <Poids val="-5.4757" />
+            <Poids val="-4.45184" />
+        </Neurone>
+        <Neurone biais="4.78758">
+            <Poids val="6.77821" />
+            <Poids val="-5.65813" />
+            <Poids val="-4.20902" />
+            <Poids val="5.3427" />
+            <Poids val="4.56401" />
+        </Neurone>
+    </Couche>
+</Reseau>

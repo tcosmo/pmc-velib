@@ -1,0 +1,70 @@
+On veut implémenter l'algorithme de rétropropagation des erreurs commandant les changements de poids dans un réseau type PMC.
+
+-Structure de réseau de neurones : 
+    -Neurone
+        Attribut : 
+            -fonction de transfert
+            -vecteur poids
+            -biais
+            -niveau d'activation au temps t
+            -sortie au temps t
+        Méthode :
+            -calcule niveau d'activation(entrée)
+            -calcule sortie au temps t
+            -met à jour neurone
+
+    -Couche
+        Attribut :
+            -liste de neurone
+            -vecteur sortie de couche
+            -sortie au temps t
+        Méthode :
+            -met à jour couche
+            -calcule le vecteur sortie de couche
+
+    -Réseau
+        Attribut :
+            -liste de couche
+            -fonction d'initialisation des poids
+            -sortie au temps t
+        Méthode :
+            -Défini les entrées du réseau (couche 0)
+            -Initialise le réseau (poids)
+            -calcule sortie totale : liste des sorties de chaque couche
+
+-Convention : 
+    -tous les vecteurs sont colonnes
+    -la couche 0 contient les entrées du réseau
+    -le réseau est totalement connecté
+    -la matrice des poids d'une couche (concaténation verticale
+des vecteurs poids des neurones de cette couche) comporte nombre_de_neurones colonnes et autant de ligne que d'entrées.
+
+-Utilisation :
+    
+    def sigmoide(n):
+        return 1/(exp(-1*n)+n)
+
+    r = Reseau()
+    p = np.matrix([[1],[2],[3]])
+
+    r.definis_entree(p)
+    r.couches.append(Couche([Neurone(sigmoide) for i in range(4)]))
+    r.couches.append(Couche([Neurone(sigmoide) for i in range(2)]))
+    r.init_reseau()
+    r.calcule_sortie()
+
+Important, toujours suivre cet ordre, la couche 1 a besoin de la couche 0 (entree) pour se définir et init_reseau a besoin que toutes les couches soient construites
+
+-Implémentation du PMC :
+    
+    -Attributs:
+        -un réseau
+        -un facteur d'apprentissage
+        -une base d'apprentissage
+        -liste des vecteurs de sensibilités par couche
+
+    -Méthode :
+        -calcule_matrice_der(k) : calcule la matrice dérivée (p.64) de la couche k
+
+-Conventions :
+    -la base d'apprentissage est une liste de couple dont le premier élément est une entrée d'apprentissage et le second la sortie désirée pour cette entrée
