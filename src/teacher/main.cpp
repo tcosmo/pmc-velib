@@ -69,25 +69,27 @@ int main(int argc, char *argv[])
     FILE* f = fopen((path+"learning.log").c_str(),"w");
 
     int nb_fois = 0;
-
+    int nb_ite_max = atoi(argv[argc-1]); 
+    
     while(1)
     {
         if(curr_ite % 10000 == 0)
         {
-            if(nb_fois > 0)
+            printf("Iteration %d/%d\n", curr_ite, nb_ite_max);
+            if(nb_fois > nb_ite_max/10000-1)
                 break;
-            printf("Iteration %d\n", curr_ite);
             fprintf(f, "Iteration %d\n", curr_ite);
             nb_fois++;
         }
 
         pmc.cycle_apprentissage();
-        erreur_sur_valid = pmc.reseau.calcule_err(base_val);
-
+        erreur_sur_valid = pmc.reseau.calcule_erreur_moyq(base_val);
+        
         if(erreur_sur_valid < min_erreur_valid)
         {
-            printf("Amelioration : %d\n", curr_ite);
-            fprintf(f,"Amelioration : %d\n", curr_ite);
+            double erreur_sur_app = pmc.reseau.calcule_erreur_moyq(base_app);
+            printf("Amelioration : %d; Erreur validation : %lf; Erreur apprentissage : %lf\n", curr_ite, erreur_sur_valid, erreur_sur_app);
+            fprintf(f,"Amelioration : %d; Erreur validation : %lf; Erreur apprentissage : %lf\n", curr_ite, erreur_sur_valid, erreur_sur_app);
             r.save_reseau(path+"network", pmc.etha);
             min_erreur_valid = erreur_sur_valid;
         }

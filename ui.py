@@ -48,8 +48,9 @@ class HelloWorld:
         
         spin = interface.get_object("spinbutton1")        
         spin.set_value(1.0)
+        
         interface.connect_signals(self)
-    
+            
     def on_mainWindow_destroy(self, widget):
         gtk.main_quit()
         

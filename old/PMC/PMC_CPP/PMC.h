@@ -82,24 +82,6 @@ class PMC
                         reseau.couches[k].neurones[i].biais += etha*sensibilite[k-1][i];
                     }
             }
-            for(auto couple: base_appretissage)
-            {
-                int i = 0;
-                reseau.calcule_sortie(get<0>(couple));
-                for(auto a: get<1>(couple))
-                {
-                    erreur_moyenne[i] += abs(reseau.sorties.back()[i]-a);
-                    i++;
-                }
-            }
-            int i = 0;
-            for(auto a: get<1>(base_appretissage[0]))
-            {
-                erreur_moyenne[i] /= base_appretissage.size();
-                i++;
-            }
-
-            //cout << "e " << erreur_moyenne[0] << endl;
         }
 
         void save_reseau(string name, string s_comment, int k, float quad, float valabs)
@@ -168,5 +150,4 @@ class PMC
         double etha;
         vector<tuple<mat,mat>> base_appretissage;
         vector<mat> sensibilite;
-        vector<double> erreur_moyenne;
 };

@@ -1,51 +1,51 @@
 <?xml version="1.0" ?>
 <Reseau couche="3" entree="4" sortie="2" etha="8">
     <Couche neurones="5">
-        <Neurone biais="0.0685053">
-            <Poids val="0.255228" />
-            <Poids val="-0.379598" />
-            <Poids val="0.102737" />
-            <Poids val="-0.296063" />
+        <Neurone biais="-0.487767">
+            <Poids val="0.0481881" />
+            <Poids val="-0.102441" />
+            <Poids val="0.278377" />
+            <Poids val="-0.323347" />
         </Neurone>
-        <Neurone biais="0.390778">
-            <Poids val="0.369509" />
-            <Poids val="0.330575" />
-            <Poids val="-0.0241053" />
-            <Poids val="-0.138371" />
+        <Neurone biais="-0.459698">
+            <Poids val="0.0953081" />
+            <Poids val="-0.155955" />
+            <Poids val="-0.129857" />
+            <Poids val="0.494172" />
         </Neurone>
-        <Neurone biais="-0.329138">
-            <Poids val="-0.188356" />
-            <Poids val="0.3091" />
-            <Poids val="0.0492114" />
-            <Poids val="0.0964283" />
+        <Neurone biais="0.350263">
+            <Poids val="-0.141366" />
+            <Poids val="0.0565019" />
+            <Poids val="-0.372886" />
+            <Poids val="-0.0919051" />
         </Neurone>
-        <Neurone biais="-0.0453163">
-            <Poids val="0.174864" />
-            <Poids val="-0.0557584" />
-            <Poids val="-0.131048" />
-            <Poids val="0.479797" />
+        <Neurone biais="0.343347">
+            <Poids val="-0.131247" />
+            <Poids val="0.128687" />
+            <Poids val="-0.158519" />
+            <Poids val="-0.229884" />
         </Neurone>
-        <Neurone biais="0.153218">
-            <Poids val="0.368184" />
-            <Poids val="0.0741341" />
-            <Poids val="-0.02912" />
-            <Poids val="-0.419102" />
+        <Neurone biais="-0.063603">
+            <Poids val="-0.37037" />
+            <Poids val="0.198578" />
+            <Poids val="0.495358" />
+            <Poids val="0.476107" />
         </Neurone>
     </Couche>
     <Couche neurones="2">
-        <Neurone biais="-0.0499827">
-            <Poids val="0.128305" />
-            <Poids val="0.430041" />
-            <Poids val="-0.301309" />
-            <Poids val="-0.0926486" />
-            <Poids val="-0.144943" />
+        <Neurone biais="-0.253758">
+            <Poids val="0.0251217" />
+            <Poids val="0.220808" />
+            <Poids val="0.114033" />
+            <Poids val="-0.453812" />
+            <Poids val="-0.215104" />
         </Neurone>
-        <Neurone biais="0.377132">
-            <Poids val="-0.0596742" />
-            <Poids val="0.0560583" />
-            <Poids val="0.171691" />
-            <Poids val="-0.383504" />
-            <Poids val="0.453524" />
+        <Neurone biais="-0.315808">
+            <Poids val="0.0835087" />
+            <Poids val="-0.469077" />
+            <Poids val="0.228756" />
+            <Poids val="-0.303039" />
+            <Poids val="-0.182919" />
         </Neurone>
     </Couche>
 </Reseau>

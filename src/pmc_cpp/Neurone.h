@@ -222,7 +222,7 @@ class Reseau
             }
         }
         
-        float calcule_err(vector<tuple<mat,mat>> base)
+        float calcule_erreur_moyq(vector<tuple<mat,mat>> base)
         {
             float moy = 0;
             int n = 0;
