@@ -1,0 +1,53 @@
+Ce fichier à pour but d'expliquer l'architecture du projet 'pmc-velib'
+
+BUT:
+    L'idée est d'utiliser un réseau de neurone (type perceptron multi-couche) pour ap-
+prendre le comportement des usagers de velibs. On se restreint à quelques stations
+autour de Jussieu (en espérant y voir un comportement modélisable en tant que
+bassin étudiant). Une fois le réseau entraîné sur des données réelles, on lui demande
+de prédire des données. Les facteurs qui nous semblent déterminant dans l'utilisation
+des velibs sont l'heure et la météo correspondante (Température, pluie, neige).
+
+On peut la décomposer en 3 parties : 
+    -Le data mining
+    -L'apprentissage
+    -L'analyse des données
+
+PRÉRÉQUIS:
+    -Python 2.7
+    -Pygtk 2.0
+    -Sqlite 3.0
+Pour compiler les cpp:
+Voir lib/
+    -tinyxml (parseur xml)
+    -armadillo (algèbre linéaire rapide)
+
+Si l'on veut compiler les bin 'init_reseau' et 'teacher':
+
+cd src/init_reseau
+./compile.sh
+
+Compile et met le bin à la racine.
+L'utilisation d'armadillo est relativement contraignante, adapter teacher/compile.sh
+au besoin suivant la doc de armadillo si l'architecture n'est pas similaire à :
+
+Mac OS 10.9/10.10 64 bits
+
+DATA MINING:
+    Dans le répertoire data mining se trouve le script qui permet de miner les données
+relatives aux velibs et à la météo. Il est lancé en continu sur un serveur distant, il
+remplit la bdd sqlite 'data_velib.sqlite'.
+
+APPRENTISSAGE:
+    En lançant 'python ui.py' on accède à l'interface graphique qui permet de configurer
+l'apprentissage désiré. Elle extrait les données à considérer de la bdd (bdd.py) et appelle
+'init_reseau' (src/init_reseau) pour créer dans results/ un nous dossier contenant un
+réseau initialisé correctement (results/x/network.xml).
+    À cause d'un souci de copié-collé dans l'ui on se sert de 'time_framework' pour spécifier
+les timestamp relatifs aux intervalles des données d'apprentissage/de validation.
+    On retrouve dans results/x/ les données brutes de la bdd servant à l'apprentissage
+ainsi que les données normalisées passées en entrée/sortie du pmc.
+    Le script learn.sh permet de lancer l'apprentissage en appelant le programme 'teacher'.
+    On peut spécifier le nombre d'itérations souhaitées : ./learn.sh 30000. Il est par défaut
+de 10000, on doit mettre un multiple de 10000.
+  
