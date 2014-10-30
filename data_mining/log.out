@@ -1,0 +1,23 @@
+Nombre de requetes : INFINI
+DEBUT REQUETE METEO
+FIN REQUETE METEO
+
+DEBUT DU MINING
+
+DEBUT CHANGEMENT METEO REF
+INSERT INTO Meteo ("Temperature","Pluie","Date","Risque_neige") VALUES (283.1,0,1414710000.0,"FALSE")
+FIN CHANGEMENT METEO REF
+2014-10-30 23:30:46 REQUETE 1/INFINI DEBUT
+INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES (5020,117,20,1,1414708022.0,1414708246.226775)
+INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES (5021,117,23,11,1414707961.0,1414708246.226775)
+INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES (5022,117,5,11,1414707763.0,1414708246.226775)
+INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES (5023,117,23,1,1414697604.0,1414708246.226775)
+INSERT INTO Station_dynamic ("ID_station","ID_meteo","available_bike_stands","available_bikes","last_update", "request_time") VALUES (5031,117,37,18,1414707946.0,1414708246.226775)
+2014-10-30 23:30:47 REQUETE 1/INFINI FIN 
+
+Traceback (most recent call last):
+  File "data_infinite.py", line 90, in <module>
+    if curr_meteo != bon_meteo():
+  File "data_infinite.py", line 77, in bon_meteo
+    meteo_intere = datetime.datetime.fromtimestamp(int(key_diff)).strftime("%Y-%m-%d %H:%M:%S")
+KeyboardInterrupt
