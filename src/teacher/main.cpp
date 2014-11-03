@@ -70,7 +70,6 @@ int main(int argc, char *argv[])
 
     int nb_fois = 0;
     int nb_ite_max = atoi(argv[argc-1]); 
-    
     while(1)
     {
         if(curr_ite % 10000 == 0)
@@ -90,7 +89,7 @@ int main(int argc, char *argv[])
             double erreur_sur_app = pmc.reseau.calcule_erreur_moyq(base_app);
             printf("Amelioration : %d; Erreur validation : %lf; Erreur apprentissage : %lf\n", curr_ite, erreur_sur_valid, erreur_sur_app);
             fprintf(f,"Amelioration : %d; Erreur validation : %lf; Erreur apprentissage : %lf\n", curr_ite, erreur_sur_valid, erreur_sur_app);
-            r.save_reseau(path+"network", pmc.etha);
+            pmc.reseau.save_reseau(path+"network", pmc.etha);
             min_erreur_valid = erreur_sur_valid;
         }
     
