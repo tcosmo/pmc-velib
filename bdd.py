@@ -131,3 +131,4 @@ def genere_donnees(dico):
     args = ["./init_reseau", path, str(n_entree), dico["fac_app"], str(2+dico["couche_cachee"])]+dico["neurone_couche"]
     call(args)
     call(["cp","src/init_reseau/learn.sh",path])
+    call(["cp","src/init_reseau/analyse.py",path])
