@@ -84,6 +84,12 @@ int main(int argc, char *argv[])
         pmc.cycle_apprentissage();
         erreur_sur_valid = pmc.reseau.calcule_erreur_moyq(base_val);
         
+        if(curr_ite % 1000==0)
+        {
+            double erreur_sur_app = pmc.reseau.calcule_erreur_moyq(base_app);
+            printf("Notice : %d %lf %lf\n", curr_ite, erreur_sur_valid, erreur_sur_app);
+        }
+ 
         if(erreur_sur_valid < min_erreur_valid)
         {
             double erreur_sur_app = pmc.reseau.calcule_erreur_moyq(base_app);

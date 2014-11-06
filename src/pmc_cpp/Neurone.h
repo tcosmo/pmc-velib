@@ -173,12 +173,16 @@ class Reseau
             TiXmlElement* msg;
             TiXmlDeclaration* decl = new TiXmlDeclaration( "1.0", "", "" );  
             doc.LinkEndChild( decl );  
+            
 
             TiXmlElement * root = new TiXmlElement( "Reseau" );
             root->SetAttribute("couche",couches.size());
             root->SetAttribute("entree",format_entree);
             root->SetAttribute("sortie",couches.back().neurones.size());
-            root->SetAttribute("etha",etha);
+            std::ostringstream strs;
+			strs << etha;
+			std::string e_str = strs.str();
+            root->SetAttribute("etha",e_str.c_str());
             doc.LinkEndChild( root );  
                         
             for(int i = 1 ; i < couches.size() ; i++)

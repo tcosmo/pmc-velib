@@ -1,6 +1,7 @@
 import random
 import numpy as np
 from math import *
+import time
  
 def sigmoide(n):
     return 1/(exp(-1*n)+1)
@@ -126,20 +127,23 @@ c=1
 l=5
 abscisses_apprentissage=[]
 import datetime
+debapp=float(T[5].split(", ")[-1].split(")")[0])
 while c==1:
     liste=T[l].split(", ")
     if len(liste)>2:
-        liste2=liste[7].split(")")
+        liste2=liste[-1].split(")")
         timestamp=float(liste2[0])
         abscisses_apprentissage.append(datetime.datetime.fromtimestamp(timestamp))
         l+=1
     else :
         c=0
+finapp=float(T[l-1].split(", ")[-1].split(")")[0])
 abscisses_val=[]
-
+debval=float(T[l+1].split(", ")[-1].split(")")[0])
+finval=float(T[len(T)-2].split(", ")[-1].split(")")[0])
 for i in range (l+1,len(T)-1):
     liste=T[i].split(", ")
-    liste2=liste[7].split(")")
+    liste2=liste[-1].split(")")
     timestamp=float(liste2[0])
     abscisses_val.append(datetime.datetime.fromtimestamp(timestamp))
 fichier.close()
@@ -186,24 +190,15 @@ fichier2.close()
        
 import matplotlib.pyplot as plt
  
-plt.subplot(2,2,1)
+plt.subplot(2,1,1)
 plt.plot(abscisses_apprentissage, reallibapp, label='reel')
 plt.plot(abscisses_apprentissage, pmclibapp, label = 'pmc')
-plt.title('Velib libres (apprentissage)')
+plt.title('Velib libres (apprentissage) du '+time.strftime("%D %H:%M", time.localtime(debapp))+" au "+time.strftime("%D %H:%M", time.localtime(finapp)))
 plt.legend()
-plt.subplot(2,2,2)
-plt.plot(abscisses_apprentissage, realstandapp, label='reel')
-plt.plot(abscisses_apprentissage, pmcstandapp, label = 'pmc')
-plt.title('Places libres (apprentissage)')
-plt.legend()
-plt.subplot(2,2,3)
+plt.subplot(2,1,2)
 plt.plot(abscisses_val, reallibval, label='reel')
 plt.plot(abscisses_val, pmclibval, label = 'pmc')
-plt.title('Velib libres (validation)')
+plt.title('Velib libres (validation) du '+time.strftime("%D %H:%M", time.localtime(debval))+" au "+time.strftime("%D %H:%M", time.localtime(finval)))
 plt.legend()
-plt.subplot(2,2,4)
-plt.plot(abscisses_val, realstandval, label='reel')
-plt.plot(abscisses_val, pmcstandval, label = 'pmc')
-plt.title('Places libres (validation)')
-plt.legend()
+ 
 plt.show()
