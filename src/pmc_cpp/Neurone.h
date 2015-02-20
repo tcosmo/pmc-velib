@@ -105,7 +105,7 @@ class Reseau
                 {
                     n.poids = zeros<mat>(couches[i-1].sortie.n_rows,1);
                     n.poids.imbue([]() { 
-                        float a = -0.5, b = 0.5;
+                        float a = -0.6, b = 0.6;
                         float random = ((float) rand()) / (float) RAND_MAX;
                         float diff = b - a;
                         float r = random * diff;
@@ -113,7 +113,7 @@ class Reseau
                     
                     n.biais = zeros<mat>(1,1);
                     n.biais.imbue([]() { 
-                        float a = -0.5, b = 0.5;
+                        float a = -0.6, b = 0.6;
                         float random = ((float) rand()) / (float) RAND_MAX;
                         float diff = b - a;
                         float r = random * diff;
@@ -146,7 +146,11 @@ class Reseau
                 	auto child_child = child->FirstChildElement();
                 	for(int iNeurone = 0 ; iNeurone < nb_neurones ; iNeurone++)
                 	{
-                		Neurone n = Neurone(sigmoide,sigmoder);
+                		Neurone n(sigmoide,sigmoder);
+                		if(iCouche+1 != nbCouches)
+                			n = Neurone(sigmoide,sigmoder);
+                		else
+                			n = Neurone(lin,linder);
                 		n.biais = zeros<mat>(1,1);
                 		n.biais(0,0) = atof(child_child->Attribute("biais"));
                 		

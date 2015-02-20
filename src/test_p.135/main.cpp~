@@ -1,0 +1,56 @@
+#include <cstdio>
+#include <cstdlib>
+
+#include "../pmc_cpp/PMC.h"
+
+using namespace std;
+
+int main()
+{
+    Reseau r(8);
+    Couche cachee, out;
+    cachee.sortie = colvec(6);
+    for(int i = 0 ; i < 6 ; i++)
+    {
+        Neurone n(sigmoide,sigmoder);
+        n.poids = zeros<mat>(8,1);
+                    n.poids.imbue([]() { 
+                        float a = -20.0, b = 20.0;
+                        float random = ((float) rand()) / (float) RAND_MAX;
+                        float diff = b - a;
+                        float r = random * diff;
+                        return a + r;}); 
+                    
+                    n.biais = zeros<mat>(1,1);
+                    n.biais.imbue([]() { 
+                        float a = -20.0, b = 20.0;
+                        float random = ((float) rand()) / (float) RAND_MAX;
+                        float diff = b - a;
+                        float r = random * diff;
+                        return a + r;}); 
+        cachee.neurones.push_back(n);
+    }
+    
+    r.couches.push_back(cachee);
+    out.sortie = colvec(1);
+    Neurone n(lin, linder);
+    n.poids = zeros<mat>(6,1);
+    n.poids = zeros<mat>(couches[i-1].sortie.n_rows,1);
+                    n.poids.imbue([]() { 
+                        float a = -20.0, b = 20.0;
+                        float random = ((float) rand()) / (float) RAND_MAX;
+                        float diff = b - a;
+                        float r = random * diff;
+                        return a + r;}); 
+                    
+                    n.biais = zeros<mat>(1,1);
+                    n.biais.imbue([]() { 
+                        float a = -20.0, b = 20.0;
+                        float random = ((float) rand()) / (float) RAND_MAX;
+                        float diff = b - a;
+                        float r = random * diff;
+                        return a + r;}); 
+    out.neurones.push_back(n);
+    r.couches.push_back(out);
+    r.save_reseau("hihi.xml");
+}

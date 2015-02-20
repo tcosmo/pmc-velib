@@ -20,7 +20,7 @@ endif
 ## When using the Sun Studio compiler
 
 
-LIB_FLAGS = -larmadillo $(EXTRA_LIB_FLAGS)
+LIB_FLAGS = $(EXTRA_LIB_FLAGS)
 ## NOTE: on Ubuntu and Debian based systems you may need to add 
 ## -lgfortran to LIB_FLAGS
 
@@ -45,7 +45,7 @@ OPT = -O2
 ## all source files into one program in a single hit.
 
 
-#DEBUG = -DARMA_EXTRA_DEBUG
+DEBUG = -DARMA_EXTRA_DEBUG
 ## Uncomment the above line to enable low-level
 ## debugging.  Lots of debugging information will
 ## be printed when a compiled program is run.
@@ -62,7 +62,8 @@ OPT = -O2
 #
 #
 
-CXXFLAGS = $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT)
+CXXFLAGS = $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) -I /Users/tristansterin/Documents/Cours/TIPE/pmc-velib/lib/armadillo-4.300.3/include -framework Accelerate -DRAMA_USE_BLAS -DRAMA_USE_LAPACK -lblas -llapack
+
 
 all: example1 example2
 

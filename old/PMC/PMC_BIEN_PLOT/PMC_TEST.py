@@ -1,5 +1,5 @@
-
 from Neurones import *
+import random
 import numpy as np
 import matplotlib.pyplot as plt
 from math import *
@@ -10,6 +10,12 @@ def sigmoide(n):
 
 def sigmoder(n):
     return exp(-1*n)/((exp(-1*n)+1)**2)
+    
+def lin(n):
+	return n
+
+def linder(n):
+	return 1
 
 class PMC:
     def __init__(self, reseau, etha, base_apprentissage = ()):
@@ -66,15 +72,34 @@ class PMC:
 def f(x):
     return (1/2)*((exp(x)-exp(-x))/(exp(x)+exp(x)))
 
-base = [(np.matrix([-0.4,0.6,-0.87]).T,np.matrix([0.09,0.56]).T)]
+def sgn():
+	a = random.randrange(0,2)
+	if a == 0:
+		return -1
+	return 1
 
-#print(base)
+def genere_entree():
+	l = [0.0]*8
+	for i in range(8):
+		l[i] = 	sgn()*random.random()*20
+	return l
+def genere_sortie():
+	l = [0.0]
+	for i in range(1):
+		l[i] = 	sgn()*random.random()
+	return l
+
+base = []
+for i in range(1500):
+	base.append((np.matrix(genere_entree()).T,np.matrix(genere_sortie()).T))
+
+print(base)
 
 r = Reseau()
 r.definis_entree(base[0][0])
 
-r.couches.append(Couche([Neurone(sigmoide,sigmoder) for i in range(2)]))
-r.couches.append(Couche([Neurone(sigmoide,sigmoder) for i in range(2)]))
+r.couches.append(Couche([Neurone(sigmoide,sigmoder) for i in range(6)]))
+r.couches.append(Couche([Neurone(lin,linder) for i in range(1)]))
 r.init_reseau()
 
 pmc = PMC(r,10,base)

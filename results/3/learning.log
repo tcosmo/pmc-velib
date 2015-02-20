@@ -1,0 +1,15 @@
+Iteration 0
+Amelioration : 0; Erreur validation : 0.080592; Erreur apprentissage : 0.049959
+Amelioration : 4; Erreur validation : 0.079801; Erreur apprentissage : 0.039446
+Amelioration : 10; Erreur validation : 0.055546; Erreur apprentissage : 0.037377
+Amelioration : 14; Erreur validation : 0.054307; Erreur apprentissage : 0.021093
+Amelioration : 15; Erreur validation : 0.047275; Erreur apprentissage : 0.022112
+Amelioration : 24; Erreur validation : 0.045635; Erreur apprentissage : 0.019351
+Amelioration : 25; Erreur validation : 0.039540; Erreur apprentissage : 0.018325
+Amelioration : 29; Erreur validation : 0.027666; Erreur apprentissage : 0.021298
+Amelioration : 154; Erreur validation : 0.026662; Erreur apprentissage : 0.019815
+Amelioration : 213; Erreur validation : 0.026251; Erreur apprentissage : 0.021303
+Amelioration : 218; Erreur validation : 0.026037; Erreur apprentissage : 0.024948
+Amelioration : 278; Erreur validation : 0.025846; Erreur apprentissage : 0.029919
+Amelioration : 301; Erreur validation : 0.024647; Erreur apprentissage : 0.020738
+Amelioration : 425; Erreur validation : 0.021149; Erreur apprentissage : 0.023275

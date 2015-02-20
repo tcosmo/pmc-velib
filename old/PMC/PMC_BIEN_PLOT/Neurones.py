@@ -46,7 +46,12 @@ class Couche:
         for n in self.neurones:
             n.maj_neurone(entree)
             self.calcule_sortie()
-
+import random
+def sgn():
+	a = random.randrange(0,2)
+	if a == 0:
+		return -1
+	return 1
 class Reseau:
     def __init__(self,couches=[],init_poids=(lambda x: 2)):
         self.couches = couches
@@ -62,8 +67,11 @@ class Reseau:
     def init_reseau(self):
         for i in range(1,len(self.couches)):
             for n in self.couches[i].neurones:
-                n.poids = np.matrix([[0.1] for j in range(len(self.couches[i-1].sortie))])
-                n.biais = -0.1
+            	l = [0.0]
+            	for j in range(len(self.couches[i-1].sortie)):
+            		l.append(sgn()*random.random()*0.6)
+                n.poids = np.matrix([l])
+                n.biais = sgn()*random.random()*0.6
 
     def calcule_sortie(self):
         self.sortie = []

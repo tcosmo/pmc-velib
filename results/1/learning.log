@@ -1,0 +1,8 @@
+Iteration 0
+Amelioration : 0; Erreur validation : 0.094027; Erreur apprentissage : 0.032716
+Amelioration : 1; Erreur validation : 0.025604; Erreur apprentissage : 0.035219
+Amelioration : 5; Erreur validation : 0.023916; Erreur apprentissage : 0.036738
+Amelioration : 21; Erreur validation : 0.023743; Erreur apprentissage : 0.036903
+Amelioration : 30; Erreur validation : 0.018922; Erreur apprentissage : 0.043123
+Amelioration : 31; Erreur validation : 0.015909; Erreur apprentissage : 0.049700
+Amelioration : 57; Erreur validation : 0.013943; Erreur apprentissage : 0.057633
