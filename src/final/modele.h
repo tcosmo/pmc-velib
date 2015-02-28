@@ -34,15 +34,7 @@ vector<double> vec_first(vector<pair<double,double>> a)
     return toReturn;
 }
 
-/* Surcharge de l'opérateur + pour implémenter l'addition vectorielle */
-vector<double> operator + (const vector<double> &a, const vector<double> &b)
-{
-    vector<double> sum;
-    for(int i = 0 ; i < a.size() ; i++)
-        sum.push_back(a[i]+b[i]);
-    return sum;
-}
-
+/* Surcharge de l'opérateur - pour faciliter l'écriture lors de l'optimisation */
 vector<vector<double>> operator - (const vector<vector<double>> &a, mat b)
 {
     vector<vector<double>> diff;
@@ -64,34 +56,50 @@ mat inverse(mat m)
     return inv_sympd(m);//via Cholesky spécialement conçu pour sym def pos
 }
 
+
+
+float rand_float(float min, float max)
+{
+    float random = ((float) rand()) / (float) RAND_MAX;
+    float range = max - min;  
+    return (random*range) + min;
+}
+
+
 /*
    Classe plutôt générique de modèle neuronal.
    Plutôt car représente uniquement la structure de réseau de neurones à 1 couche cachée
    à 1 neurone de sortie, utilisée dans ce TIPE.
 
+   modele(nb_entrees, complexite) :
+        -nb_entrees : biais + nb_variables, nb_entrees >= 1
+        -complexite : nombre de neurones cachés
  */
-
 class modele
 {
 
     public:
-
         modele(int nb_entrees, int complexite) : nb_entrees(nb_entrees), complexite(complexite)
         {
+            double s = sqrt(3.0/(nb_entrees-1));//voir dossier, probas!
+            rand_float(-1,1);//superstition 
+
             /* Remplissage de la couche cachée */
             for(int i_cache = 0 ; i_cache < complexite ; i_cache++)
             {
                 neurones.push_back(make_pair(sigmoide,sigmoder));
                 poids.push_back(vector<double>());
-                for(int j = 0 ; j < nb_entrees ; j++)
-                    poids[i_cache].push_back(1.6);
+                for(int j = 0 ; j < nb_entrees-1 ; j++)
+                    poids[i_cache].push_back(rand_float(-1,1)*s);
+                poids[i_cache].push_back(0);//Paramètre de biais
             }
 
             /*Neurone de sortie*/
             neurones.push_back(make_pair(lin,linder));
             poids.push_back(vector<double>());
             for(int j = 0 ; j < complexite ; j++)
-                poids[complexite].push_back(-0.32);
+                poids[complexite].push_back(rand_float(-1,1)*s);
+        
         }
 
 
@@ -143,8 +151,8 @@ class modele
         /* Implémentation de la rétropropagation 
            Calcul le gradient de la fonction de perte associée à un exemple.
            Calcul un vecteur d'intérêt dans le calcul de l'approximation de la matrice Hessienne. 
-        */
-        pair<mat,mat> grad_hess_pi(t_exemple exemple)
+         */
+        pair<mat,mat> grad_hess_pi(t_exemple exemple, bool affiche=false)
         {   
             mat grad = zeros<colvec>(nb_poids());
             mat vec_hess = zeros<colvec>(nb_poids());
@@ -156,10 +164,10 @@ class modele
              */
             double e = exemple.second-sortie_neurones[complexite].first;//erreur de prédiction 
             double dpi_dvs = -2*(e)*neurones[complexite].second(sortie_neurones[complexite].second);
-
-            int k = 0;//compteur total sur les poids
+            int k = 0;//comptieur total sur les poids
             /*Pour les neurones cachés*/
             for(int i = 0 ; i < neurones.size()-1 ; i++)
+            {
                 for(int j = 0 ; j < poids[i].size() ; j++)
                 {
                     /*Valeur de dpi/dwij évalulée en w
@@ -173,19 +181,22 @@ class modele
                     double dpi_dwij = exemple.first[j]*dpi_dvs*dvs_dvi;
 
                     grad(k,0) = dpi_dwij;
-                    vec_hess(k,0) = grad(k,0)/(-2*e);
+                    //dg/dwij
+                    vec_hess(k,0) = dvs_dvi*exemple.first[j];
                     k++;
                 } 
-
+            }
             /*Pour le neurone de sortie*/
             for(int i = 0 ; i < neurones.size()-1 ; i++)
             {
                 double dvs_dwsi = neurones[i].first(sortie_neurones[i].second);
                 double dpi_dwsi = dpi_dvs*dvs_dwsi;
                 grad(k,0) = dpi_dwsi;
-                vec_hess(k,0) = grad(k,0)/(-2*e);
+                //dg/dwsi
+                vec_hess(k,0) = sortie_neurones[i].first;
                 k++;
             }
+
             return make_pair(grad,vec_hess);
         }
 
@@ -203,74 +214,60 @@ class modele
            Avec l'approximation faite sur la matrice Hessienne au voisinage d'un minimum
            on peut faire d'une pierre deux coups et calculer la hessienne en même temps que le
            gradient.
-        */
+         */
         pair<mat,mat> grad_hess_cout(vector<t_exemple> ensemble_ex)
         {
             mat grad = zeros<colvec>(nb_poids());
             mat approx_hess = zeros<mat>(nb_poids(),nb_poids());
             for(int i = 0 ; i < ensemble_ex.size()  ; i++)
             {
-                pair<mat,mat> grad_hess = grad_hess_pi(ensemble_ex[i]);
+                pair<mat,mat> grad_hess = grad_hess_pi(ensemble_ex[i], false);
                 grad += grad_hess.first;
                 approx_hess += grad_hess.second*trans(grad_hess.second);
             }
-            return make_pair(grad,approx_hess);
+            return make_pair(grad,2*approx_hess);
         }
 
 
         /* implémentation de l'algorithme de Levenberg-Marquardt */
 
-        void optimise(int n_max, vector<t_exemple> ensemble_ex)
+        void optimise(int n_max, vector<t_exemple> ensemble_ex, bool log=false)
         {
-            double mu = 3.14; // C'est pour rigoler
-            double r = 10; // facteur d'échelle
             double last_cout = cout(ensemble_ex);
-            bool doit_mieux = false;
+            double mu = 0.01;
+            std::cout.precision(20);//précision float pour log éventuel
             for(int iter = 0 ; iter < n_max ; iter++)
             {
-                pair<mat,mat> grad_hess = grad_hess_cout(ensemble_ex);
-                printf("Position avant : %lf %lf\n", poids[0][0], poids[1][0]); 
-                std::cout << grad_hess.first << grad_hess.second;
-                vector<vector<double>> ancien_poids = poids;
-
-                poids = poids - inverse(grad_hess.second+mu*eye<mat>(nb_poids(),nb_poids()))*grad_hess.first;
-                double cur_cout = cout(ensemble_ex);
-                printf("Position apres : %lf %lf %lf\n", poids[0][0], poids[1][0], cur_cout); 
-                printf("Couts : %lf %lf\n",  cur_cout, last_cout);
-                if(cur_cout < last_cout)
+                if(log)
+                    std::cout << "Cout : " << last_cout << endl;
+                auto grad_hess = grad_hess_cout(ensemble_ex);
+                auto ancien_poids = poids;
+                mat to_choose;//Si on veut essayer l'optimisation de Marquardt
+                //to_choose = diagmat(grad_hess.second);
+                to_choose = eye<mat>(nb_poids(),nb_poids());
+                poids = poids - inverse(grad_hess.second + mu*to_choose)*grad_hess.first;
+                
+                double nouveau_cout = cout(ensemble_ex);
+                //Si c'est moins bon on jette et on se rapproche du gradient
+                if(nouveau_cout > last_cout)
                 {
-                    if(!doit_mieux && iter != n_max-1)
-                        poids = ancien_poids;
-                    else
-                    {
-                        printf("ADJUGE\n");
-                        doit_mieux = false;
-                        continue;
-                    }
-                    mu /= 10;
-                    last_cout = cur_cout;
-                    continue;
-                } 
-
-                if(cur_cout > last_cout)
-                {
-                    poids = ancien_poids;
-                    last_cout = cur_cout;
                     mu *= 10;
-                    doit_mieux = true;
+                    poids = ancien_poids - inverse(grad_hess.second + mu*to_choose)*grad_hess.first;
                     continue;
                 }
-            }
 
+                //C'est meilleur : on garde et on se rapproche de Newton
+                last_cout = nouveau_cout;
+                mu /= 10;
+            }
         }
 
-        int nb_entrees; //Nombre de variables d'entrée du modèle
+
+        int nb_entrees; //Biais + nombre de variables d'entrée du modèle
         int complexite; //Nombre de neurones cachés
 
         vector<vector<double> > poids;    
         vector<t_neurone> neurones;
-
-
 };
 
 
