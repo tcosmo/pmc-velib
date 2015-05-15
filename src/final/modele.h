@@ -53,7 +53,7 @@ vector<vector<double>> operator - (const vector<vector<double>> &a, mat b)
 
 mat inverse(mat m)
 {
-    return inv_sympd(m);//via Cholesky spécialement conçu pour sym def pos
+    return inv(m);
 }
 
 

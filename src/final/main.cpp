@@ -32,7 +32,44 @@ void exemple_carre()
     std::cout << "Cout final : " << g.cout(ens) << endl;
 }
 
+vector<t_exemple> creer_set()
+{
+    vector<t_exemple> toReturn;
+    FILE *f = fopen("norm.data", "r");
+    int nb;
+    fscanf(f,"%d\n", &nb);
+    printf("%d\n", nb);
+    for(int i = 0 ; i < nb ; i++)
+    {
+        double h,m,t,p,s,inutile;
+        vector<double> entree;
+        
+        fscanf(f,"%lf %lf %lf %lf %lf %lf\n", &h, &m, &t, &p, &s, &inutile);
+        entree = vector<double>{h,m,t,p,1};
+        toReturn.push_back(make_pair(entree,s));
+    }
+    fclose(f);
+    return toReturn;
+}
+
+void save_modele(modele g)
+{
+    FILE *f = fopen("modele.data", "w");
+    fprintf(f, "%d %d\n", g.nb_entrees, g.complexite);
+    for(int i = 0 ; i < g.poids.size() ; i++)
+        for(int j = 0 ; j < g.poids[i].size() ; j++)
+            fprintf(f, "%lf\n", g.poids[i][j]);
+    fclose(f);
+}
+
 int main()
 {
-    exemple_carre();
+    //exemple_carre();
+    auto ens = creer_set();
+    modele g(5,15);
+    std::cout.precision(20);
+    std::cout << "Cout initial : " << g.cout(ens) << endl;
+    g.optimise(500, ens);
+    std::cout << "Cout final : " << g.cout(ens) << endl;
+    save_modele(g);
 }
